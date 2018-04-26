@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To Do</title>
+	<link rel="stylesheet" type="text/css" href="/static/todo/bootstrap/css/bootstrap.min.css">
+    <script type="text/javascript" src="/static/todo/js/jquery-1.4.js"></script>
+	<script src="/static/todo/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<div class="container">
+	<br>
+	<br>
+	<form name="sub" method="POST">
+		{% csrf_token %}
+		Topic:<input type="text" name="topic" class="form-control"><br/>
+		Content:<textarea name="content" class="form-control"></textarea><br/>
+		<input type="submit" value="Add" class="btn btn-danger"/>
+		<buton type="button" class="btn btn-success"><a style = "color:white;" href="/todo/">Todo List</a></buton>
+	</form>
+	</div>
+</body>
+</html>
